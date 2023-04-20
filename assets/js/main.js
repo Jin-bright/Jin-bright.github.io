@@ -114,4 +114,13 @@
 
 			});
 
+			$(document).ready(function () { // 기본정보 토글효과 
+				$(".basicInfoBox").click((e)=>{
+				   $(e.target).next()
+						   .slideToggle();
+			   })
+		   
+		   });
+		   
+
 })(jQuery);
