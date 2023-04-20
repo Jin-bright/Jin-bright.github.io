@@ -2613,7 +2613,7 @@ h2{
 		justify-content: space-between;
 		background-color: #3da301; /*1f1815*/
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), url("../../images/bg.gif");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
