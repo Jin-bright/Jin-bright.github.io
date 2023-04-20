@@ -1,6 +1,6 @@
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
-
+/*@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap');
 /*
 	Strata by HTML5 UP
 	html5up.net | @ajlkn
@@ -70,6 +70,20 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+}
+
+
+/* 내가 추가한 글꼴 */
+h2{
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-weight: 700;
+	color: black;
+}
+
+#one{
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-weight: 300;
+	color: black;
 }
 
 /* Basic */
@@ -2465,8 +2479,13 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
+			border-color: black;
+			color: black !important;
+
+			/*
 			border-color: #49bf9d;
 			color: #49bf9d !important;
+			*/
 		}
 
 		input[type="submit"]:active,
@@ -2518,7 +2537,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #49bf9d;
+			background-color: #49bf9d;  
 			border-color: #49bf9d;
 			color: #ffffff !important;
 		}
@@ -2527,8 +2546,8 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: #5cc6a7;
-				border-color: #5cc6a7;
+				background-color: black;
+				border-color:     black;  /* #5cc6a7;*/  
 			}
 
 			input[type="submit"].primary:active,
