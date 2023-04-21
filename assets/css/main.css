@@ -116,6 +116,14 @@ blockquote{
 
 }
 
+#mores span{
+	font-weight: 500;
+}
+
+li span{
+	font-weight: 500;
+}
+
 .basicInfoBox{
 	font-family: 'IBM Plex Sans KR', sans-serif;
 	font-weight: 500;
@@ -135,8 +143,8 @@ blockquote{
 }
 
 #certi{
-	width:  500px;
-	font-size: 14px;
+	width:  400px;
+	font-size: 13px;
 }
 
 #certi  td{
@@ -2190,6 +2198,7 @@ blockquote{
 				opacity: 1.0;
 			}
 
+
 		.image img {
 			border-radius: 0.35em;
 			display: block;
@@ -2615,8 +2624,8 @@ blockquote{
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #49bf9d;  
-			border-color: #49bf9d;
+			background-color: #424646e7;  
+			border-color: #424242;
 			color: #ffffff !important;
 		}
 
@@ -2669,6 +2678,45 @@ blockquote{
 			line-height: 1.5em;
 			margin: 0;
 		}
+
+	.work-itemcopy {
+		margin: 0 0 2em 0;
+	}
+
+		.work-itemcopy .image {
+			margin: 0 0 1.5em 0;
+		}
+
+		.work-itemcopy h3 {
+			font-size: 1em;
+			margin: 0 0 0.5em 0;
+		}
+
+		.work-itemcopy p {
+			font-size: 0.8em;
+			line-height: 1.5em;
+			margin: 0;
+		}
+
+
+		.work-itemcopytwo {
+			margin: 0 0 2em 0;
+		}
+
+			.work-itemcopytwo .image {
+				margin: 0 0 1.5em 0;
+			}
+
+			.work-itemcopytwo h3 {
+				font-size: 1em;
+				margin: 0 0 0.5em 0;
+			}
+
+			.work-itemcopytwo p {
+				font-size: 0.8em;
+				line-height: 1.5em;
+				margin: 0;
+			}
 
 /* Header */
 

@@ -1,0 +1,795 @@
+<!--
+---
+layout: post
+title:  "Welcome to Jekyll!"
+date:   2023-04-20 17:31:12 +0900
+categories: jekyll update
+---
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+Jekyll requires blog post files to be named according to the following format:
+
+`YEAR-MONTH-DAY-title.MARKUP`
+
+Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>파이널프로젝트_오이마켓</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+@import url("fontawesome-all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap');
+
+html {
+	-webkit-print-color-adjust: exact;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'IBM Plex Sans KR', sans-serif;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+/*.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }*/
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+
+#jnotion, a {
+	-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	border-bottom: dotted 1px;
+	color: #1c6d56;
+	text-decoration: none;
+}
+
+#jnotion:hover {
+	border-bottom-color: transparent;
+	color: #49bf9d !important;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+	<article id="f0bfd65a-2614-454f-91d1-b867d6fac2e6" class="page sans"><header><div class="page-header-icon undefined">
+		<span class="icon">🥒</span></div><h1 class="page-title">파이널프로젝트_오이마켓</h1>
+		<p>※ NOTION 페이지로 이동하셔도 보실 수 있습니다  <span><a id="jnotion" href="#"> NOTION 이동</a></span>  </p>
+		<table class="properties">
+			<tbody>
+				<tr class="property-row property-row-text">
+					<th>
+						<span class="icon property-icon">
+							<svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText">
+								<path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path>
+						</svg>
+					</span>기간
+				</th>
+				<td>2023.03~2023.04</td>
+			</tr>
+			<tr class="property-row property-row-multi_select">
+				<th>
+					<span class="icon property-icon">
+						<svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect">
+							<path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>카테고리</th><td><span class="selected-value select-value-color-red">KH_파이널팀프로젝트</span></td></tr></tbody></table></header><div class="page-body"><figure id="661564cd-4569-4740-8d7e-b5b0fcd20dd2" class="image">
+								<a href="%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5%E1%86%AF%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3_%E1%84%8B%E1%85%A9%E1%84%8B%E1%85%B5%E1%84%86%E1%85%A1%E1%84%8F%E1%85%A6%E1%86%BA%20f0bfd65a2614454f91d1b867d6fac2e6/Untitled.png">
+									<img style="width:1404px" src="/images/final/indeximg.png"/>
+								</a>
+							</figure>
+							<figure id="e453dbbe-0fe7-4be6-91bd-b8e8dad56ccb">
+								<div class="source">
+									<video src="/images/final/finalvedio.mp4" width="850px" controls></video>
+								</div><figcaption>구현한 페이지의 일부 기능에 대한 영상입니다 </figcaption></figure>
+	<p id="100e22fb-4311-4b5b-95f1-7eeb410a90ee" class="">
+</p><p id="0b68f784-d81e-4e72-bfcc-d42f88b555a2" class="">
+</p><p id="66244ec8-b16f-486d-b42b-d8a3d9b8002f" class="">
+</p><p id="6fbb41e0-7dac-42ad-87bd-79055dc2d29f" class=""><strong>&lt; 목차 &gt; </strong></p><nav id="a711879d-76c1-4bea-b86b-e48f5737a5d5" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0">
+<a class="table_of_contents-link" href="#fd631edb-75b6-4fc2-949f-5dc6c7cf6e3a" style="color:rgb(19, 18, 18)">■ 프로젝트명 : 오이마켓</a></div><div class="table_of_contents-item table_of_contents-indent-0">
+<a class="table_of_contents-link" href="#04b0039b-72ce-4e2b-84f3-da69721e5ccd" style="color:rgb(19, 18, 18)">■ 프로젝트 기간 :  2023.02. 22 ~ 2023.04.10</a></div><div class="table_of_contents-item table_of_contents-indent-0">
+<a class="table_of_contents-link" href="#73674661-b007-45c1-8a36-bf963086272c" style="color:rgb(19, 18, 18)">■ Contents</a></div><div  class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#05822a5b-6c64-40cd-b17e-6acf85ae69c7" style="color:rgb(19, 18, 18)">1. 개요</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#da5417f2-9c55-4d15-b40c-3c1acfb402ff" style="color:rgb(19, 18, 18)">2. 사용기술 및 개발환경</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a style="color:rgb(19, 18, 18)" class="table_of_contents-link" href="#c097eae4-a888-494c-a511-afe22c0c0a0c">3. 주요기능</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#f78d52ee-1eef-4238-b726-fc25e6a571d6" style="color:rgb(19, 18, 18)">4. 설계</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a style="color:rgb(19, 18, 18)" class="table_of_contents-link" href="#553838be-df49-43d7-8594-b496e654a28e">5. ppt</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d74de2d1-fdef-44e7-a346-4d0363c6e436" style="color:rgb(19, 18, 18)">6. 담당했던 파트 화면 설명</a></div></nav><p id="987782db-8d0c-4075-afe0-e0b1edd40db7" class=""></p><p id="528d0e09-cbcd-4853-8eb7-ca8c2045ebbb" class="">
+</p><hr id="fecca67e-b471-43d5-9d5c-f5adba081a4a"/><p id="04b49499-c47a-4015-adf7-173b07f96e1e" class="">
+</p><h1 id="fd631edb-75b6-4fc2-949f-5dc6c7cf6e3a" class="">■ 프로젝트명 : 오이마켓</h1><h1 id="04b0039b-72ce-4e2b-84f3-da69721e5ccd" class="">■ 프로젝트 기간 :  2023.02. 22 ~ 2023.04.10</h1><figure id="933cca77-8241-4a1a-b157-c51275362b3e" class="image"><a href="/images/final/Untitled 1.png"><img style="width:1057px" src="/images/final/Untitled 1.png"/></a></figure><h1 id="73674661-b007-45c1-8a36-bf963086272c" class="">■ Contents</h1><h3 id="05822a5b-6c64-40cd-b17e-6acf85ae69c7" class="">1. 개요</h3><ul id="2e464a59-df56-4515-b66f-8b6fc082abda" class="bulleted-list"><li style="list-style-type:disc"><strong>개발배경</strong></li></ul><p id="1f1f064c-8153-4aa7-af1d-920caa823829" class="">2015년 당근마켓 설립 이후, 지하철역이나 번화가에서 초면으로 보이는 사람들이 만나 물건을 주고받고 헤어지는 모습은  자연스러운 일상의 풍경이 되었습니다.</p><p id="9b5bd79e-4654-481d-aa4a-747dd0e7621d" class="">그간 당근마켓은 중고 거래 이외에도 지역 커뮤니티 서비스인 “동네생활”,  소모임 서비스인 “같이해요” 등 새로운 시도를 이어왔으나 이에 대한 인지도는 높지 않은 실정입니다.</p><p id="fa20bfb5-7b13-4c4b-b2ea-419ef5ddd3dc" class="">Holy J는 기존 모바일 중심이던 당근마켓을 게시판을 사용한 웹 페이지의 형태로 구현하여 
+중고 거래를 포함한 당근마켓의 다양한 서비스를 사용자 편의에 맞게 제공하고자 합니다.</p><p id="9cd08b13-5f20-4851-b64a-ff38f5e20f55" class="">
+</p><ul id="66f3411f-fe6f-4bb0-a99e-b05893543f69" class="bulleted-list"><li style="list-style-type:disc"><strong>구현 목표 </strong></li></ul><p id="bc94f01d-f551-4140-b391-04e2c80f07c1" class="">개발 시 중점으로 두었던 목표로는 하기와 같습니다.</p><ol type="1" id="60d2232b-c8cd-43cf-8dfa-9570d065283c" class="numbered-list" start="1"><li>주축인 ‘중고거래’ 게시판 이외 ‘동네생활’ 및 ‘같이해요’ 게시판을 독립적으로 분리하여 게시판 접근을 편리하게 한다.</li></ol><ol type="1" id="c6eb472c-4868-4c39-880c-7ed866c803bc" class="numbered-list" start="2"><li>‘중고거래’ 게시판과 ‘같이해요’ 게시판 내 채팅방 접근의 편의성을 개선한다.</li></ol><ol type="1" id="76a1d658-9b75-4786-acf4-f4d0c019e366" class="numbered-list" start="3"><li>주요 기능 중심의 사용자 친화적 웹 사이트를 구현하여 이웃과 함께하는 로컬 커뮤니티를 만든다.</li></ol><p id="b78a417b-81b4-4d59-ae22-abb8f14fe687" class="">
+</p><hr id="63ecd478-34ef-4bf0-a478-d68ca73e420b"/><h3 id="da5417f2-9c55-4d15-b40c-3c1acfb402ff" class="">2. 사용기술 및 개발환경</h3><ul id="50043017-2f48-4d2a-9555-e465af693bb7" class="bulleted-list"><li style="list-style-type:disc">OS : window</li></ul><ul id="cdec4547-b695-45c4-ac63-7bdb255bd83a" class="bulleted-list"><li style="list-style-type:disc">IDE :  STS (Spring Tool Suite)</li></ul><ul id="b6969355-f5a9-424f-b10a-7ab0642141fb" class="bulleted-list"><li style="list-style-type:disc">Language : JAVA, JSP, HTML5, CSS3, JavaScript, jQuery</li></ul><ul id="c19a674e-aaf4-4b47-a8b5-dce1308795de" class="bulleted-list"><li style="list-style-type:disc">Middleware : TOMCAT</li></ul><ul id="79b0e38e-23dd-47f0-b72d-4be7aea43c8a" class="bulleted-list"><li style="list-style-type:disc">DBMS : Oracle</li></ul><ul id="6f04496c-5f6c-41ba-a105-c7efcd60098b" class="bulleted-list"><li style="list-style-type:disc">API :  카카오지도 API</li></ul><ul id="0ed127b5-4bff-4b0d-af01-e982ef76a332" class="bulleted-list"><li style="list-style-type:disc">Service：Discord, Notion </li></ul><p id="09329651-7fb3-4ca0-8f69-2ab7e1efc825" class="">
+</p><hr id="c2caf562-48a1-4581-9fa9-c1d21264da97"/><h3 id="c097eae4-a888-494c-a511-afe22c0c0a0c" class="">3. 주요기능</h3><ul id="8c4e001e-f7bb-40c2-b2df-770c347ddee7" class="bulleted-list"><li style="list-style-type:disc"><strong>회원</strong><ul id="00c6ed4a-6cf8-4999-bbbe-5f7ddbc4a393" class="bulleted-list"><li style="list-style-type:circle">회원가입, 로그인, 아이디 중복검사, 자동로그인, 로그아웃</li></ul></li></ul><ul id="9ef1a854-f062-4c0b-a758-0c245e514be7" class="bulleted-list"><li style="list-style-type:disc"><strong>중고거래</strong><ul id="9238a070-7065-431e-9cb6-21a874e87025" class="bulleted-list"><li style="list-style-type:circle">게시글 등록/수정/삭제, 사진 첨부, 목록조회, 상세페이지 조회, 검색, 신고, 조회수, 관심 등록, 카테고리 조회, 거래후기작성, 매너온도 일괄 처리</li></ul><ul id="febacabf-6df1-4405-81bf-e7203a7eb0f0" class="bulleted-list"><li style="list-style-type:circle">( 1:1 채팅 ) 게시글 별 대화 목록, 대화방 나가기, 채팅 및 첨부타일 전송, 약속잡기, 장소공유, 사용자 신고</li></ul></li></ul><ul id="f477b09f-ff5a-41fc-80ae-2fac8e956e5b" class="bulleted-list"><li style="list-style-type:disc"><strong>동네생활</strong><ul id="ac9c98cb-2e28-4bed-9280-c8449d47d6e7" class="bulleted-list"><li style="list-style-type:circle">게시글 등록/수정/삭제, 목록 조회, 상세페이지 조회, 검색, 신고, 공감, 카테고리 조회, 댓글작성</li></ul></li></ul><ul id="29d5c746-1e15-489f-84c7-49dc182cae2a" class="bulleted-list"><li style="list-style-type:disc"><strong>같이해요</strong><ul id="353e1ab4-2bc9-4576-bf3d-9362a94506a6" class="bulleted-list"><li style="list-style-type:circle">게시글 등록/수정/삭제, 목록 조회, 상세페이지 조회, 신고, 카테고리 조회, 모집중 조회, 일정 일괄 처리</li></ul><ul id="f1cac15d-1e07-4513-a20e-73282adf3027" class="bulleted-list"><li style="list-style-type:circle">( 단체 채팅 ) 대화방 생성/나가기, 채팅 및 첨부타일 전송, 사용자 신고</li></ul></li></ul><ul id="b6354ed9-fad4-4790-87ea-a715321078db" class="bulleted-list"><li style="list-style-type:disc"><strong>나의 오이 (마이페이지)</strong><ul id="57c450b9-2fd8-4597-9e65-b86be97b156c" class="bulleted-list"><li style="list-style-type:circle">프로필 조회, 비밀번호 확인, 회원정보 수정, 회원 탈퇴, 알림 키워드 설정, 나의 판매 / 구매 내역 조회, 판매 상태 변경, 받은 매너/보낸 매너 확인, 관심 목록 조회, 나의 동네생활 게시글/댓글 조회, 나의 같이해요 게시글 조회</li></ul><ul id="57e8ec63-ed02-4e9b-99be-61259ee3b638" class="bulleted-list"><li style="list-style-type:circle">(채팅) 나의 채팅 목록 조회, 중고거래 채팅방 열기, 같이해요 채팅방 열기</li></ul></li></ul><ul id="78f2cc38-4fcf-48ef-84c0-cc99f7d1669f" class="bulleted-list"><li style="list-style-type:disc"><strong>관리자</strong><ul id="273cda66-c091-482b-b4de-c5bf64c0b703" class="bulleted-list"><li style="list-style-type:circle">공지 등록/삭제, 공지 목록조회, 회원 목록 조회, 회원 권한 수정/탈퇴, 게시글 리스트 조회 / 카테고리 변경 / 삭제, 신고 목록 조회, 신고 처리, 검색</li></ul>
+<p id="64774156-3a55-4024-a209-9d09c09c5bc8" class=""></p></li></ul><hr id="7fcac65c-156f-409d-b661-be4cf536e60f"/><h3 id="f78d52ee-1eef-4238-b726-fc25e6a571d6" class="">4. 설계</h3><ul id="72dc252a-d701-4dc3-beeb-a9f9f372a46f" class="bulleted-list"><li style="list-style-type:disc"><strong> ER 다이어그램 </strong></li></ul><figure style="margin-left: -155px;" id="89828ba9-c5f4-4fb2-85a7-8d87ce777dbe" class="image">
+<a href="notion://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F87e11afc-650c-41e7-a2ac-1ec4868a7121%2FHoly_J_(1).png?id=89828ba9-c5f4-4fb2-85a7-8d87ce777dbe&table=block&spaceId=24f0b33c-d325-4f81-b6ab-62f1e882a105&width=2000&userId=5d41cd89-9577-449a-b3ee-46f4429b9cfc&cache=v2"><img style="width:672px" src="/images/final/Holy_erd.png"/></a></figure><p id="830c1840-2614-4f52-91b9-b694608c59a9" class=""></p>
+<ul id="f705f79b-be2a-4f0f-9aed-95af671a3f01" class="toggle"><li><details open=""><summary><strong>+ 유스케이스 다이어그램</strong></summary><ul id="a5f98fab-055e-464a-b63e-ebfe5191d3f5" class="toggle"><li><details open=""><summary>1) 회원</summary><figure id="feb3c03f-457b-4763-b7c6-84225fb64d55" class="image"><a href="/images/final/Untitled 2.png"/><img src="/images/final/Untitled 2.png" alt=""></a></figure></details></li></ul>
+<ul id="fed199e8-4b15-4c12-8a6d-b902df8e35f4" class="toggle"><li><details open=""><summary>2) 중고거래</summary><figure id="47be30e7-8abc-47b1-bdec-49c2717b9ea6" class="image"><a href="/images/final/Untitled 3.png"/><img src="/images/final/Untitled 3.png" alt=""></a></figure></details></li></ul>
+<ul id="888ad01e-0994-47f9-9c69-b89777b611ba" class="toggle"><li><details open=""><summary>3) 동네생활</summary><figure id="76f41fa8-8ad2-4462-adda-6077bcf54c77" class="image"><a href="/images/final/Untitled 4.png"><img style="width:810px" src="/images/final/Untitled 4.png"/></a></figure></details></li></ul>
+<ul id="03b2f249-9390-4974-a949-e9cd45529b34" class="toggle"><li><details open=""><summary>4) 같이해요</summary><figure id="b7e009be-fbaf-4b8e-9670-c9d8c91d026f" class="image"><a href="/images/final/Untitled 5.png"><img style="width:624px" src="/images/final/Untitled 5.png"/></a></figure></details></li></ul>
+<ul id="82d360a4-e3ab-4b8c-8687-0a628830de82" class="toggle"><li><details open=""><summary>5) 관리자</summary><figure id="8fa91ef8-b267-47c3-b0bd-aeabc8236c65" class="image"><a href="/images/final/Untitled 6.png"><img style="width:782px" src="/images/final/Untitled 6.png"/></a></figure></details></li></ul><p id="4fbb7ffd-d6fd-472b-98ff-8c29d1fd270c" class="">
+</p></details></li></ul><ul id="99457733-61e4-4583-a88b-1b4b793a3866" class="toggle"><li><details open=""><summary><strong>+ 시퀀스 다이어그램 </strong></summary><ul id="ef318c2d-6455-46a0-900a-ee6d8db01271" class="toggle"><li><details open=""><summary>중고거래_게시글 상세 조회</summary><figure id="adafab80-7aba-4e21-8db7-fd8fce8acbbd" class="image"><img style="width:624px" src="/images/final/Untitled 7.png"/></figure></details></li></ul>
+<ul id="f4ba61d0-2f0d-4b7e-9c86-f1ad5cc6c11f" class="toggle"><li><details open=""><summary>중고거래_관심 등록</summary><figure id="f9042d22-6f8a-4c0b-9841-3aba7f4d8638" class="image"><img style="width:642px" src="/images/final/Untitled 8.png"/></figure></details></li></ul>
+<ul id="3812d1df-7267-4383-9475-7579102c00fc" class="toggle"><li><details open=""><summary>채팅방_첨부파일 등록</summary><figure id="4ac32258-36c8-495e-96f0-e7eb073dca1c" class="image"><img style="width:705px" src="/images/final/Untitled 8.png"/></figure></details></li></ul><p id="dded6579-2620-4b09-a40b-cce2e82dd1e9" class="">
+</p></details></li></ul><hr id="a894bbb0-48b1-4ceb-afe5-2157c4352ff6"/>
+<h2 id="553838be-df49-43d7-8594-b496e654a28e" class="">5. ppt</h2><figure id="4ee9f1fa-3ea2-46f1-8dbc-011bcadbd4aa"><div class="source"><a href="https://www.notion.so/brightjin/_-f0bfd65a2614454f91d1b867d6fac2e6?pvs=4#553838bedf4943d78594b496e654a28e" style="text-decoration: none; color: black;"> 원본 노션페이지에서 ppt, pdf 버전으로 확인하실 수 있습니다 :) </a></div></figure></div></figure>
+</p><hr id="ce13858b-f666-4c52-94fe-b40e265c8f26"/><p id="da4bdfe1-f00c-42b2-a36a-af60dcc0b207" class="">
+</p><h2 id="d74de2d1-fdef-44e7-a346-4d0363c6e436" class="">6. 담당했던 파트 화면 설명</h2><p id="8b46cc45-ee68-4447-9671-8d2d0ff2a21d" class="">
+</p><p id="4f393792-2d93-40d3-a085-72497eb31a5a" class=""></p><p id="94ddce7f-ad60-4608-a191-dfbd302cbf1a" class=""> <strong>중고거래 </strong><div class="indented"><ul id="3cfefd77-bcd2-479b-be98-2cf22ecc5985" class="bulleted-list"><li style="list-style-type:disc">게시글 등록/수정/삭제, 사진 첨부, 목록조회, 상세페이지 조회, 검색, 신고, 조회수, 관심 등록, 카테고리 조회, 거래후기작성, 매너온도 일괄 처리</li></ul></div></p><p id="e0184d76-f72c-4745-9d00-f8cf23304ba1" class="">
+</p><p id="d99a93f2-3ebd-4bf1-807e-2e64317a874a" class=""><p style="font-size: 14px;">※ 각 항목을 선택하시면 NOTION 페이지로 이동됩니다 </p>
+</p><figure id="adda3656-b9f6-4b80-ab82-4e89ab9f5ec8" class="link-to-page"><a href="https://www.notion.so/adda3656b9f64b80ab824e89ab9f5ec8" style="color: black; text-decoration: none;"><span class="icon">1️⃣</span>중고거래 전체 게시글 리스트 화면 </a></figure><figure id="3fc77644-bea8-4753-94a6-ea31d98f79cf" class="link-to-page"><a  style="color: black; text-decoration: none;" href="https://www.notion.so/3fc77644bea8475394a6ea31d98f79cf"><span class="icon">2️⃣</span>중고거래 카테고리 / 검색 시 화면 </a></figure><figure id="2a91fc65-1c48-4a18-9aa6-88dd60cf25cb" class="link-to-page"><a href="https://www.notion.so/2a91fc651c484a189aa688dd60cf25cb"  style="color: black; text-decoration: none;"><span class="icon">3️⃣</span>중고거래 게시글 등록 화면</a></figure><figure id="c0bc56be-f1b4-4966-ad04-b29f731be006" class="link-to-page"><a href="https://www.notion.so/c0bc56bef1b44966ad04b29f731be006"  style="color: black; text-decoration: none;"><span class="icon">4️⃣</span>중고거래 상세 게시글 화면 - 판매자 시점 / 구매자 시점</a></figure><figure id="b66ecab2-33e9-44e5-85a9-8729ffb09e31" class="link-to-page"><a href="https://www.notion.so/b66ecab233e944e585a98729ffb09e31"  style="color: black; text-decoration: none;"><span class="icon">5️⃣</span>거래 완료 후 거래 후기남기기 / 매너온도 일괄반영처리</a></figure><p id="4b55df7f-6f3c-4ab6-949c-4067e0698467" class="">
+</p><p id="9c981b3c-7d72-487b-808c-3c47f9b87c5a" class="">
+</p><p id="9a19c5db-d7f0-4a90-92aa-aee7019bd6bb" class=""><mark class="highlight-gray_background">추가로 개인적으로 파이널 프로젝트를 회고하며 쓰고있는 기록입니다 : )</mark></p><p id="d7cf8b0d-6a62-4886-aaf5-30ebd9a6bbd6" class=""><mark class="highlight-gray_background">※  주소 : </mark><mark class="highlight-gray_background"><a href="https://jin-bright.tistory.com/category/Final%20Project">https://jin-bright.tistory.com/category/Final Project</a></mark></p><p id="b60dea01-c50c-412e-ae15-b2f249f84f73" class="">
+</p><p id="c976e387-120d-4789-9da6-3626eec641d7" class="">
+</p><p id="880e6b90-fbf5-4231-8635-b28841cb98de" class="">
+</p><p id="b30365d1-e4e7-49fa-9b60-f49a66a42f17" class="">
+</p></div></article></body></html>
