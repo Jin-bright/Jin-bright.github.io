@@ -147,6 +147,16 @@ li span{
 	font-size: 13px;
 }
 
+
+p a:hover{
+	font-weight: 500;
+}
+
+
+.tmp:hover{
+	font-weight: 500;
+}
+
 #certi  td{
 	font-size: 1em;
 	padding: 9px;
