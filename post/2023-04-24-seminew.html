@@ -1,0 +1,762 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>세미프로젝트_OBTG(수정버전) </title>
+
+    
+    <style>
+    @import url("fontawesome-all.min.css");
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap');
+
+    /* cspell:disable-file */
+    /* webkit printing magic: print all background colors */
+
+    
+/* 뷰포트 너비가 600px 이하일 때 */
+@media (max-width: 600px) {
+
+}
+    html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+    * {
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    @media only screen {
+        body {
+            margin: 2em auto;
+            max-width: 900px;
+            color: rgb(55, 53, 47);
+            font-family: 'IBM Plex Sans KR', sans-serif;
+        }
+    }
+    
+    body {
+        line-height: 1.5;
+        white-space: pre-wrap;
+    }
+    
+    a,
+    a.visited {
+        color: inherit;
+        text-decoration: underline;
+    }
+    
+    .pdf-relative-link-path {
+        font-size: 80%;
+        color: #444;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0.75em;
+    }
+    
+    h1 {
+        font-size: 1.875rem;
+        margin-top: 1.875rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+        margin-top: 1.25rem;
+    }
+    
+    .source {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 1.5em;
+        word-break: break-all;
+    }
+    
+    .callout {
+        border-radius: 3px;
+        padding: 1rem;
+    }
+    
+    figure {
+        margin: 1.25em 0;
+        page-break-inside: avoid;
+    }
+    
+    figcaption {
+        opacity: 0.5;
+        font-size: 85%;
+        margin-top: 0.5em;
+    }
+    
+    mark {
+        background-color: transparent;
+    }
+    
+    .indented {
+        padding-left: 1.5em;
+    }
+    
+    hr {
+        background: transparent;
+        display: block;
+        width: 100%;
+        height: 1px;
+        visibility: visible;
+        border: none;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    @media only print {
+        img {
+            max-height: 100vh;
+            object-fit: contain;
+        }
+    }
+    
+    @page {
+        margin: 1in;
+    }
+    
+    .collection-content {
+        font-size: 0.875rem;
+    }
+    
+    .column-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .column {
+        padding: 0 1em;
+    }
+    
+    .column:first-child {
+        padding-left: 0;
+    }
+    
+    .column:last-child {
+        padding-right: 0;
+    }
+    
+    .table_of_contents-item {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.3;
+        padding: 0.125rem;
+    }
+    
+    .table_of_contents-indent-1 {
+        margin-left: 1.5rem;
+    }
+    
+    .table_of_contents-indent-2 {
+        margin-left: 3rem;
+    }
+    
+    .table_of_contents-indent-3 {
+        margin-left: 4.5rem;
+    }
+    
+    .table_of_contents-link {
+        text-decoration: none;
+        opacity: 0.7;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid rgba(55, 53, 47, 0.09);
+        border-collapse: collapse;
+    }
+    
+    table {
+        border-left: none;
+        border-right: none;
+    }
+    
+    th,
+    td {
+        font-weight: normal;
+        padding: 0.25em 0.5em;
+        line-height: 1.5;
+        min-height: 1.5em;
+        text-align: left;
+    }
+    
+    th {
+        color: rgba(55, 53, 47, 0.6);
+    }
+    
+    ol,
+    ul {
+        margin: 0;
+        margin-block-start: 0.6em;
+        margin-block-end: 0.6em;
+    }
+    
+    li > ol:first-child,
+    li > ul:first-child {
+        margin-block-start: 0.6em;
+    }
+    
+    ul > li {
+        list-style: disc;
+    }
+    
+    ul.to-do-list {
+        padding-inline-start: 0;
+    }
+    
+    ul.to-do-list > li {
+        list-style: none;
+    }
+    
+    .to-do-children-checked {
+        text-decoration: line-through;
+        opacity: 0.375;
+    }
+    
+    ul.toggle > li {
+        list-style: none;
+    }
+    
+    ul {
+        padding-inline-start: 1.7em;
+    }
+    
+    ul > li {
+        padding-left: 0.1em;
+    }
+    
+    ol {
+        padding-inline-start: 1.6em;
+    }
+    
+    ol > li {
+        padding-left: 0.2em;
+    }
+    
+    .mono ol {
+        padding-inline-start: 2em;
+    }
+    
+    .mono ol > li {
+        text-indent: -0.4em;
+    }
+    
+    .toggle {
+        padding-inline-start: 0em;
+        list-style-type: none;
+    }
+    
+    /* Indent toggle children */
+    .toggle > li > details {
+        padding-left: 1.7em;
+    }
+    
+    .toggle > li > details > summary {
+        margin-left: -1.1em;
+    }
+    
+    .selected-value {
+        display: inline-block;
+        padding: 0 0.5em;
+        background: rgba(206, 205, 202, 0.5);
+        border-radius: 3px;
+        margin-right: 0.5em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        white-space: nowrap;
+    }
+    
+    .collection-title {
+        display: inline-block;
+        margin-right: 1em;
+    }
+    
+    .simple-table {
+        margin-top: 1em;
+        font-size: 0.875rem;
+        empty-cells: show;
+    }
+    .simple-table td {
+        height: 29px;
+        min-width: 120px;
+    }
+    
+    .simple-table th {
+        height: 29px;
+        min-width: 120px;
+    }
+    
+    .simple-table-header-color {
+        background: rgb(247, 246, 243);
+        color: black;
+    }
+    .simple-table-header {
+        font-weight: 500;
+    }
+    
+    time {
+        opacity: 0.5;
+    }
+    
+    .icon {
+        display: inline-block;
+        max-width: 1.2em;
+        max-height: 1.2em;
+        text-decoration: none;
+        vertical-align: text-bottom;
+        margin-right: 0.5em;
+    }
+    
+    img.icon {
+        border-radius: 3px;
+    }
+    
+    .user-icon {
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 100%;
+        margin-right: 0.5rem;
+    }
+    
+    .user-icon-inner {
+        font-size: 0.8em;
+    }
+    
+    .text-icon {
+        border: 1px solid #000;
+        text-align: center;
+    }
+    
+    .page-cover-image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        max-height: 30vh;
+    }
+    
+    .page-header-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .page-header-icon-with-cover {
+        margin-top: -0.72em;
+        margin-left: 0.07em;
+    }
+    
+    .page-header-icon img {
+        border-radius: 3px;
+    }
+    
+    .link-to-page {
+        margin: 1em 0;
+        padding: 0;
+        border: none;
+        font-weight: 500;
+    }
+    
+    p > .user {
+        opacity: 0.5;
+    }
+    
+    td > .user,
+    td > time {
+        white-space: nowrap;
+    }
+    
+    input[type="checkbox"] {
+        transform: scale(1.5);
+        margin-right: 0.6em;
+        vertical-align: middle;
+    }
+    
+    p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    
+    .image {
+        border: none;
+        margin: 1.5em 0;
+        padding: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+    
+    .code,
+    code {
+        background: rgba(135, 131, 120, 0.15);
+        border-radius: 3px;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-size: 85%;
+        tab-size: 2;
+    }
+    
+    code {
+        color: #eb5757;
+    }
+    
+    .code {
+        padding: 1.5em 1em;
+    }
+    
+    .code-wrap {
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+    
+    .code > code {
+        background: none;
+        padding: 0;
+        font-size: 100%;
+        color: inherit;
+    }
+    
+    blockquote {
+        font-size: 1.25em;
+        margin: 1em 0;
+        padding-left: 1em;
+        border-left: 3px solid rgb(55, 53, 47);
+    }
+    
+    .bookmark {
+        text-decoration: none;
+        max-height: 8em;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+    }
+    
+    .bookmark-title {
+        font-size: 0.85em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 1.75em;
+        white-space: nowrap;
+    }
+    
+    .bookmark-text {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bookmark-info {
+        flex: 4 1 180px;
+        padding: 12px 14px 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .bookmark-image {
+        width: 33%;
+        flex: 1 1 180px;
+        display: block;
+        position: relative;
+        object-fit: cover;
+        border-radius: 1px;
+    }
+    
+    .bookmark-description {
+        color: rgba(55, 53, 47, 0.6);
+        font-size: 0.75em;
+        overflow: hidden;
+        max-height: 4.5em;
+        word-break: break-word;
+    }
+    
+    .bookmark-href {
+        font-size: 0.75em;
+        margin-top: 0.25em;
+    }
+    
+    /*
+    .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+    .code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+    .serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+    .mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+    .pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+    .pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+    .pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+    .pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+    .pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+    .pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+    .pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+    .pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+    .pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+    .pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+    .pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+    .pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+    .pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+    .pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+    .pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+    .pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+    */
+    .highlight-default {
+        color: rgba(55, 53, 47, 1);
+    }
+    .highlight-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+    }
+    .highlight-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+    }
+    .highlight-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+    }
+    .highlight-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+    }
+    .highlight-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+    }
+    .highlight-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+    }
+    .highlight-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+    }
+    .highlight-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+    }
+    .highlight-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+    }
+    .highlight-gray_background {
+        background: rgba(241, 241, 239, 1);
+    }
+    .highlight-brown_background {
+        background: rgba(244, 238, 238, 1);
+    }
+    .highlight-orange_background {
+        background: rgba(251, 236, 221, 1);
+    }
+    .highlight-yellow_background {
+        background: rgba(251, 243, 219, 1);
+    }
+    .highlight-teal_background {
+        background: rgba(237, 243, 236, 1);
+    }
+    .highlight-blue_background {
+        background: rgba(231, 243, 248, 1);
+    }
+    .highlight-purple_background {
+        background: rgba(244, 240, 247, 0.8);
+    }
+    .highlight-pink_background {
+        background: rgba(249, 238, 243, 0.8);
+    }
+    .highlight-red_background {
+        background: rgba(253, 235, 236, 1);
+    }
+    .block-color-default {
+        color: inherit;
+        fill: inherit;
+    }
+    .block-color-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+    }
+    .block-color-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+    }
+    .block-color-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+    }
+    .block-color-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+    }
+    .block-color-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+    }
+    .block-color-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+    }
+    .block-color-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+    }
+    .block-color-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+    }
+    .block-color-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+    }
+    .block-color-gray_background {
+        background: rgba(241, 241, 239, 1);
+    }
+    .block-color-brown_background {
+        background: rgba(244, 238, 238, 1);
+    }
+    .block-color-orange_background {
+        background: rgba(251, 236, 221, 1);
+    }
+    .block-color-yellow_background {
+        background: rgba(251, 243, 219, 1);
+    }
+    .block-color-teal_background {
+        background: rgba(237, 243, 236, 1);
+    }
+    .block-color-blue_background {
+        background: rgba(231, 243, 248, 1);
+    }
+    .block-color-purple_background {
+        background: rgba(244, 240, 247, 0.8);
+    }
+    .block-color-pink_background {
+        background: rgba(249, 238, 243, 0.8);
+    }
+    .block-color-red_background {
+        background: rgba(253, 235, 236, 1);
+    }
+    .select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+    .select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+    .select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+    .select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+    .select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+    .select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+    .select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+    .select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+    .select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+    .select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+    
+    .checkbox {
+        display: inline-flex;
+        vertical-align: text-bottom;
+        width: 16;
+        height: 16;
+        background-size: 16px;
+        margin-left: 2px;
+        margin-right: 5px;
+    }
+    
+    .checkbox-on {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+    
+    .checkbox-off {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+    #jnotion {
+        -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        border-bottom: dotted 1px;
+        color: #1c6d56;
+        text-decoration: none;
+    }
+
+    #jnotion:hover {
+        border-bottom-color: transparent;
+        color: #49bf9d !important;
+        text-decoration: none;
+    }
+
+    a:hover {
+        border-bottom-color: transparent;
+        color: #33856e !important;
+        text-decoration: none;
+    }
+
+    .toggle:hover{
+        cursor: pointer;
+    }
+
+        
+    </style>
+    </head>
+    <body>
+        <article id="bd6a2725-c83e-4135-ae82-f1a841885987" class="page sans">
+            <header>
+                <div class="page-header-icon undefined"><span class="icon">💃</span></div><h1 class="page-title">세미프로젝트_OBTG(수정버전) </h1>
+                <p>※ NOTION 페이지로 이동하셔도 보실 수 있습니다  <span><a id="jnotion" href="https://brightjin.notion.site/_OBTG-bd6a2725c83e4135ae82f1a841885987"> NOTION 이동</a></span>  </p>
+                <table class="properties">
+                    <tbody>
+                        <tr class="property-row property-row-text">
+                            <th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>기간</th>
+                            <td>2023. 02 ~ 2023. 03 </td>
+                        </tr>
+                        <tr class="property-row property-row-multi_select">
+                            <th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>카테고리</th>
+                            <td><span class="selected-value select-value-color-green">자체프로젝트</span><span class="selected-value select-value-color-yellow">팀프로젝트</span></td>
+            </tr>
+        </tbody>
+    </table>
+</header>
+    </p><figure id="fbdc023e-4533-4ce0-86a2-81967a83d3b6"><div class="source"><video src="/images/semi/OBTG_Semi-Project_-_Chrome_2023-04-18_20-42-44.mp4" width="850em" controls></video></div><figcaption>해당 프로젝트를 실행시켰을 때의 화면입니다. (간략한 동영상)</figcaption></figure><p id="7a291e36-b589-4628-a1b4-ff82160a1245" class="">
+    </p><p id="8d20052f-551f-49ec-a0ff-122862bd4530" class=""><mark class="highlight-red"><strong>※ 최초 만들었던 프로젝트에서 다른 팀원 1명과(총2명) 리팩토링 및 시각적 화면을 개선하였습니다. </strong></mark></p><p id="35add3f2-2b64-4b60-9598-606a90d602a2" class=""><strong>※ 최초 진행했던 세미프로젝트  </strong></p><figure id="82030bc2-88f0-46bf-a306-6260dff7c609" class="link-to-page"><a href="https://www.notion.so/_OBTG-82030bc288f046bfa3066260dff7c609"><span class="icon">🕺</span>세미프로젝트_OBTG(기존)</a></figure><p id="e025c37d-881c-4d32-80cc-edb3fc66bae2" class="">
+
+    </p><p id="fb2d29bd-1129-48c1-84a8-3d246e9db670" class=""><strong>&lt; 목차 &gt; </strong></p><nav id="c10b9707-9f1a-453d-8664-db7b5bc1b2e1" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#0e0ae3db-2583-4335-a0fc-f34119d61a7a">■ 프로젝트명 : OBTG</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b5a758f6-57cf-438e-b50c-d31f6e4991eb">■ Git 주소 : <a href="https://github.com/Jin-bright/JJ">https://github.com/Jin-bright/JJ</a></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1ebe15da-2c85-4349-9dea-7f9e1ffa7f57">■ 프로젝트 기간 :  2023년 2월  ~ 2023년 3월</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#fbf41d52-3730-478a-b1bd-8139f220f100">■ Contents</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1359fc63-14a2-4128-a195-31cacd77bb3b">1. 개요</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a8893768-a14b-4ae6-b96b-8084c5a5d55d">2. 사용기술 및 개발환경</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c28bb6fb-eb7f-4ac5-a343-3d61d54818c0">3. 주요기능</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#12122d13-19f8-434f-96f1-f5b81665a33e">4. 설계</a></div></nav><p id="e75c38ae-0e09-4ac9-bf54-fd940371e5a0" class="">
+    </p><p id="c6811649-9b3e-4d84-a1ab-3f93fdf0d892" class="">
+    </p><hr id="446c0ab9-3739-4d04-8485-e71d4e8bf04a"/><h1 id="0e0ae3db-2583-4335-a0fc-f34119d61a7a" class="">■ 프로젝트명 : OBTG</h1><h1 id="b5a758f6-57cf-438e-b50c-d31f6e4991eb" class="">■ Git 주소 : <a href="https://github.com/Jin-bright/JJ">https://github.com/Jin-bright/JJ</a></h1><h1 id="1ebe15da-2c85-4349-9dea-7f9e1ffa7f57" class="">■ 프로젝트 기간 :  2023년 2월  ~ 2023년 3월</h1><h1 id="fbf41d52-3730-478a-b1bd-8139f220f100" class="">■ Contents</h1>
+    <h3 id="1359fc63-14a2-4128-a195-31cacd77bb3b" class="">1. 개요</h3><p id="e2b4bbda-c200-446b-ba01-b66f300fa8ae" class="">
+    </p><ul id="acd7fc9d-7bc0-4b1e-813a-35f0155fc2a4" class="bulleted-list"><li style="list-style-type:disc"><strong>개발배경</strong></li></ul><p id="e9a32005-9f99-4277-9f32-b054205f5fd7" class="">인터넷 쇼핑몰 사이트는 점점 늘어나지만 패션에 대해 소통할 수 있는 공유사이트는 이에 비해 부족하다고 느꼈습니다. 또한 코로나 같은 대면 만남이 꺼려지는 상황이 발생하더라도 인터넷상에서라도 다양한 사람들과 소통을 할 수 있는 소통의 장이 있으면 좋겠다는 아이디어에 착안하여 패션 공유와 소통을 목표로한 참여형 커뮤니티 웹 어플리케이션을 개발하고자 하였습니다. </p><p id="7fe1c060-a8b7-49b2-8ba7-a9c982684f9b" class=""> </p><ul id="febd6061-e877-4dc2-8a06-803ce42df30b" class="bulleted-list"><li style="list-style-type:disc"><strong>구현 목표</strong></li></ul><p id="21d905b5-e37e-4fd0-93ab-326a2971a7c7" class="">1) 누구가 쉽게 관심을 가질 수 있는 패션이라는 주제로 OOTD 게시판에서는 회원들과 자유롭게 패션에 대해 이야기하고 의류 정보를 공유할 수 있는 사이트 개발을 목표로 하였습니다. 
+    </p><p id="b045857a-ba1c-479b-bc85-761efa4e89dd" class="">2) SHARE 게시판에서는 의류를 무상으로 회원들과 양도하여
+    패스트패션으로 인해 심화되는 환경오염을 방지하는데 기여할 수 있는 사이트를 만들고자 하였습니다.</p><p id="b76184e9-697c-4b2e-81d4-5cac2f337ab6" class="">
+    </p><p id="d82d8475-f267-4cdf-8d0d-f8ff380cef1a" class="">3) 직관적이고 트렌디한 화면 구현을 목표로 하였습니다.</p><p id="bd03163f-eb6e-4af5-83a0-31a841cb9098" class="">
+    </p><hr id="ba89fb34-2f03-4e62-9729-f2635ebe292a"/><h3 id="a8893768-a14b-4ae6-b96b-8084c5a5d55d" class="">2. 사용기술 및 개발환경</h3><ul id="60692b53-9672-4d30-8f89-f4427a76fca8" class="bulleted-list"><li style="list-style-type:disc">OS : window</li></ul><ul id="afca486f-38cd-4ae9-bff2-53bff5582066" class="bulleted-list"><li style="list-style-type:disc">IDE :  eclipse</li></ul><ul id="65a0af39-3ee9-4e58-ad99-d74e8e926ee7" class="bulleted-list"><li style="list-style-type:disc">Language : JAVA, JSP, HTML5, CSS3, JavaScript, jQuery</li></ul><ul id="55dac5a3-7160-4394-9f13-2a6510fc6304" class="bulleted-list"><li style="list-style-type:disc">Middleware : TOMCAT</li></ul><ul id="c55c3ff6-172b-42a8-92ba-1f4bdd404915" class="bulleted-list"><li style="list-style-type:disc">DBMS : Oracle</li></ul><ul id="8cf0d75f-93c1-468b-adfb-8f7255022eff" class="bulleted-list"><li style="list-style-type:disc">Service：Discord, Notion </li></ul><p id="fe3c4d7f-3034-4b87-9835-6356f4c94de1" class="">
+    </p><hr id="06fe53f1-6232-4acb-9a69-cf47f076fe4d"/><h3 id="c28bb6fb-eb7f-4ac5-a343-3d61d54818c0" class="">3. 주요기능</h3>
+    <ul id="d6f25d80-9ffd-48b9-a10a-c0cfccafa725" class="bulleted-list"><li style="list-style-type:disc"><strong>회원</strong><ul id="0988296f-62e6-4f8a-a865-64320fb4683f" class="bulleted-list"><li style="list-style-type:circle">회원가입, 로그인, 아이디 중복검사, 아이디저장, 로그아웃</li></ul>
+</li></ul><ul id="df0c2616-ab1d-4ee6-8680-121979173b4c" class="bulleted-list"><li style="list-style-type:disc"><strong>OOTD게시판 </strong><ul id="8f64a1b0-2946-479b-832d-14eec376940b" class="bulleted-list"><li style="list-style-type:circle"> 전체 게시물조회, 게시글 작성/수정/삭제, 카테고리 조회, 댓글작성/삭제, 프로필 조회, 좋아요, 신고</li></ul>
+</li></ul><ul id="b2136f73-510c-4aa1-aebc-4ccacfc93f06" class="bulleted-list"><li style="list-style-type:disc"><strong>SHARE게시판 </strong><ul id="4cfd74df-a751-47e2-8c28-1e9884d4d0f9" class="bulleted-list"><li style="list-style-type:circle"> 전체 게시물조회, 게시글 작성/수정/삭제, 카테고리(필터), 프로필 조회, 보관 기능, 신고, 쪽지보내기</li></ul>
+</li></ul><ul id="bc38bb51-5222-45dd-9be7-6bea5584584f" class="bulleted-list"><li style="list-style-type:disc"><strong>FAQ게시판 </strong><ul id="f2c5a050-87a6-4af1-91f9-096fed44d5d5" class="bulleted-list"><li style="list-style-type:circle"> FAQ조회, 문의사항 작성/수정/삭제, 댓글작성/삭제</li></ul>
+</li></ul><ul id="c342b736-9864-465c-90d5-8a40c1987130" class="bulleted-list"><li style="list-style-type:disc"><strong>관리자페이지 </strong><ul id="93c542d7-1700-4a68-b2b1-5b0ce3acb151" class="bulleted-list"><li style="list-style-type:circle"> 회원목록 조회, 회원권한변경, 신고내역조회, 신고 게시물 삭제처리</li></ul>
+</li></ul><ul id="7fa25121-fdcd-492c-a08c-193d17b73434" class="bulleted-list"><li style="list-style-type:disc"><strong>COLUMN게시판 </strong><ul id="14e82e15-67f9-47fa-844e-28d39e39c054" class="bulleted-list"><li style="list-style-type:circle"> 전체 게시물 조회, 게시글 작성/수정/삭제</li></ul>
+</li></ul><ul id="14bacfa2-86f8-4b81-a2cf-9ce71900f207" class="bulleted-list"><li style="list-style-type:disc"><strong>마이페이지 </strong><ul id="48cf01ba-fb44-45c9-bc9d-76d6128c9855" class="bulleted-list"><li style="list-style-type:circle"> 개인정보조회/변경, 회원탈퇴, 내가 쓴 글 확인, 좋아요한 게시물 확인, 알림(신고, 쪽지), 쪽지함 확인</li></ul></li>
+</ul>
+<hr id="2145bcac-f42d-45e5-9af3-315025bb7e14"/>
+<h3 id="12122d13-19f8-434f-96f1-f5b81665a33e" class="">4. 설계</h3>
+<ul id="50e69f54-5296-4b84-b34a-88b48ccceec0" class="bulleted-list"><li style="list-style-type:disc"><strong>ER 다이어그램 </strong></li></ul><figure id="7714c892-a563-4b60-813b-b822d9d6886e" class="image"><img style="width:560em" src="/images/semi/Untitled 1.png"/></figure><p id="33c1bde2-c1e1-40e6-bcc4-0a283a4d5ab6" class="">
+    </p><hr id="4dd05ed1-158f-43a1-b7c1-dba9c5753323"/><p id="85bab158-e3f9-4978-974e-8496a329b486" class="">
+    </p><p id="fed798d1-b5c9-435a-ac4e-70fdf93df237" class="">
+    </p></div></article></body></html>
